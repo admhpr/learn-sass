@@ -1,0 +1,29 @@
+/*Note: that we are importing the files that 
+we need and are using in this base file,
+the SassScript compiler automatically 
+removes the _ prefix from any files in the partials folder,
+if we want to use a mixin we can use the @include syntax*/
+
+// modules and variables
+@import "variables";
+@import "mixins";
+
+.main {
+  @include center(30em);
+  @include size(50%, 25%);
+  display: flex;
+  margin: 0 auto;
+  color: $dark-blue;
+
+  .main-text {
+    margin-top: 1.25em;
+    font-family: $font;
+    font-size: $font-size;
+    .inner-text {
+      color: $light-blue;
+    }
+  }
+  .main-img {
+    @include size(9em);
+  }
+}

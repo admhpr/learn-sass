@@ -1,0 +1,14 @@
+/*with mixins we use the @mixin keyword to tell 
+the compiler that it is approaching a mixin,
+we then define the values and properties inside
+the mixin.*/
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin center($width) {
+  max-width: $width;
+  margin: 0 auto;
+}
